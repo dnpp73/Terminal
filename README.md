@@ -21,6 +21,7 @@ If need ssh, you could use [`NMSSH/NMSSH`](https://github.com/NMSSH/NMSSH) libra
 ## Features
 
 - supports iOS 11 ~ (iOS 12 or above recommended)
+- supports GUI selection, select all, copy, paste
 - supports hardware keyboard input
 - supports CJK IME (little buggy...)
 
@@ -33,11 +34,34 @@ See Example Appication.
 - [`SSHTerminalViewController.swift`](/Example/TerminalExample/ViewController/SSHTerminalViewController.swift)
 
 
-## Need `sshd` with password authentication?
+## How to build Example App
+
+### `swiftlint` and `carthage` required
+
+```sh
+brew install swiftlint carthage
+```
+
+### Clone Repository and prepare
+
+```sh
+git clone git@github.com:dnpp73/Terminal.git
+
+cd Terminal/Example
+
+carthage bootstrap --platform iOS --no-use-binaries
+
+open TerminalExample.xcodeproj
+```
+
+If you want to run on a real devices, change the `Team` because of code sign problem.
+
+
+### `sshd` with password authentication?
 
 I recommend using Docker. See [`Dockerize an SSH service`](https://docs.docker.com/engine/examples/running_ssh_service/)
 
-[Chef Cutting board](https://github.com/dnpp73/chef_cutting_board) is convenient.
+[`dnpp73/chef_cutting_board`](https://github.com/dnpp73/chef_cutting_board) is convenient.
 
 
 ## Carthage
