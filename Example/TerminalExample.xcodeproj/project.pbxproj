@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		190296E4247D2B9B00C019C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190296E3247D2B9B00C019C5 /* AppDelegate.swift */; };
+		190296E8247D2B9B00C019C5 /* SSHTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190296E7247D2B9B00C019C5 /* SSHTextViewController.swift */; };
+		190296EB247D2B9B00C019C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190296E9247D2B9B00C019C5 /* Main.storyboard */; };
+		190296ED247D2B9D00C019C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190296EC247D2B9D00C019C5 /* Assets.xcassets */; };
+		190296F0247D2B9D00C019C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190296EE247D2B9D00C019C5 /* LaunchScreen.storyboard */; };
+		190296FC247D2C9400C019C5 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190296FA247D2C8000C019C5 /* Terminal.framework */; };
+		190296FD247D2C9400C019C5 /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 190296FA247D2C8000C019C5 /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		19029702247D308900C019C5 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19029700247D308900C019C5 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		191EC528249BB3470058507E /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EC527249BB3470058507E /* InputAccessoryView.swift */; };
+		191EC52B249BB3EF0058507E /* NibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EC529249BB3EF0058507E /* NibCreatable.swift */; };
+		191EC52E249BB4A40058507E /* InputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191EC52D249BB4A40058507E /* InputAccessoryView.xib */; };
+		1930D0A02480202100882D16 /* SSHTerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930D09F2480202100882D16 /* SSHTerminalViewController.swift */; };
+		1930D0A2248021C400882D16 /* TerminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930D0A1248021C400882D16 /* TerminalViewController.swift */; };
+		199E03DB248FCDCD00E8BE10 /* KeyboardPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199E03DA248FCDCD00E8BE10 /* KeyboardPicker.swift */; };
+		199E03DD248FDD4200E8BE10 /* Number+fallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199E03DC248FDD4200E8BE10 /* Number+fallback.swift */; };
+		19A84156248F8161008FB52D /* KeyboardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84155248F8161008FB52D /* KeyboardLayoutGuide.swift */; };
+		19A84158248F8190008FB52D /* Notification+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84157248F8190008FB52D /* Notification+Keyboard.swift */; };
+		19A8415A248F81C5008FB52D /* KeyboardNotificationObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A84159248F81C5008FB52D /* KeyboardNotificationObservable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		190296F9247D2C8000C019C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 190296F5247D2C8000C019C5 /* Terminal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 190296D3247D2A8900C019C5;
+			remoteInfo = Terminal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		190296FE247D2C9400C019C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				190296FD247D2C9400C019C5 /* Terminal.framework in Embed Frameworks */,
+				19029702247D308900C019C5 /* NMSSH.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		190296E0247D2B9B00C019C5 /* TerminalExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		190296E3247D2B9B00C019C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		190296E7247D2B9B00C019C5 /* SSHTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHTextViewController.swift; sourceTree = "<group>"; };
+		190296EA247D2B9B00C019C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		190296EC247D2B9D00C019C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		190296EF247D2B9D00C019C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		190296F1247D2B9D00C019C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		190296F5247D2C8000C019C5 /* Terminal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Terminal.xcodeproj; path = ../Terminal.xcodeproj; sourceTree = "<group>"; };
+		19029700247D308900C019C5 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
+		19029709247D38CD00C019C5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		1902970D247D391A00C019C5 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		1902970E247D391A00C019C5 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
+		191EC527249BB3470058507E /* InputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
+		191EC529249BB3EF0058507E /* NibCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCreatable.swift; sourceTree = "<group>"; };
+		191EC52D249BB4A40058507E /* InputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputAccessoryView.xib; sourceTree = "<group>"; };
+		1930D09F2480202100882D16 /* SSHTerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHTerminalViewController.swift; sourceTree = "<group>"; };
+		1930D0A1248021C400882D16 /* TerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewController.swift; sourceTree = "<group>"; };
+		199E03DA248FCDCD00E8BE10 /* KeyboardPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPicker.swift; sourceTree = "<group>"; };
+		199E03DC248FDD4200E8BE10 /* Number+fallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+fallback.swift"; sourceTree = "<group>"; };
+		19A84155248F8161008FB52D /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
+		19A84157248F8190008FB52D /* Notification+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Keyboard.swift"; sourceTree = "<group>"; };
+		19A84159248F81C5008FB52D /* KeyboardNotificationObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationObservable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		190296DD247D2B9B00C019C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190296FC247D2C9400C019C5 /* Terminal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		190296C7247D280200C019C5 = {
+			isa = PBXGroup;
+			children = (
+				190296F5247D2C8000C019C5 /* Terminal.xcodeproj */,
+				190296E2247D2B9B00C019C5 /* TerminalExample */,
+				190296E1247D2B9B00C019C5 /* Products */,
+				190296FB247D2C9400C019C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		190296E1247D2B9B00C019C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				190296E0247D2B9B00C019C5 /* TerminalExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		190296E2247D2B9B00C019C5 /* TerminalExample */ = {
+			isa = PBXGroup;
+			children = (
+				19029708247D38AC00C019C5 /* Information */,
+				19029707247D38A300C019C5 /* dotfiles */,
+				1902970B247D390400C019C5 /* Dependency */,
+				19A84153248F7FEC008FB52D /* Util */,
+				19A84154248F8154008FB52D /* KeyboardNotification */,
+				191EC525249BB3050058507E /* InputAccessoryView */,
+				19A84151248F7FC1008FB52D /* ViewController */,
+				190296E3247D2B9B00C019C5 /* AppDelegate.swift */,
+				190296E9247D2B9B00C019C5 /* Main.storyboard */,
+				190296EC247D2B9D00C019C5 /* Assets.xcassets */,
+				190296EE247D2B9D00C019C5 /* LaunchScreen.storyboard */,
+			);
+			path = TerminalExample;
+			sourceTree = "<group>";
+		};
+		190296F6247D2C8000C019C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				190296FA247D2C8000C019C5 /* Terminal.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		190296FB247D2C9400C019C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19029700247D308900C019C5 /* NMSSH.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19029707247D38A300C019C5 /* dotfiles */ = {
+			isa = PBXGroup;
+			children = (
+				19029709247D38CD00C019C5 /* .swiftlint.yml */,
+			);
+			name = dotfiles;
+			sourceTree = "<group>";
+		};
+		19029708247D38AC00C019C5 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				190296F1247D2B9D00C019C5 /* Info.plist */,
+			);
+			name = Information;
+			sourceTree = "<group>";
+		};
+		1902970B247D390400C019C5 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				1902970D247D391A00C019C5 /* Cartfile */,
+				1902970E247D391A00C019C5 /* Cartfile.resolved */,
+			);
+			name = Dependency;
+			sourceTree = "<group>";
+		};
+		191EC525249BB3050058507E /* InputAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				191EC529249BB3EF0058507E /* NibCreatable.swift */,
+				191EC527249BB3470058507E /* InputAccessoryView.swift */,
+				191EC52D249BB4A40058507E /* InputAccessoryView.xib */,
+			);
+			path = InputAccessoryView;
+			sourceTree = "<group>";
+		};
+		19A84151248F7FC1008FB52D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				190296E7247D2B9B00C019C5 /* SSHTextViewController.swift */,
+				1930D09F2480202100882D16 /* SSHTerminalViewController.swift */,
+				1930D0A1248021C400882D16 /* TerminalViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		19A84153248F7FEC008FB52D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				199E03DA248FCDCD00E8BE10 /* KeyboardPicker.swift */,
+				199E03DC248FDD4200E8BE10 /* Number+fallback.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		19A84154248F8154008FB52D /* KeyboardNotification */ = {
+			isa = PBXGroup;
+			children = (
+				19A84159248F81C5008FB52D /* KeyboardNotificationObservable.swift */,
+				19A84157248F8190008FB52D /* Notification+Keyboard.swift */,
+				19A84155248F8161008FB52D /* KeyboardLayoutGuide.swift */,
+			);
+			path = KeyboardNotification;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		190296DF247D2B9B00C019C5 /* TerminalExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 190296F2247D2B9D00C019C5 /* Build configuration list for PBXNativeTarget "TerminalExample" */;
+			buildPhases = (
+				19029710247D39EE00C019C5 /* Run SwiftLint Auto Correct */,
+				19029711247D3A1B00C019C5 /* Run SwiftLint */,
+				190296DC247D2B9B00C019C5 /* Sources */,
+				190296DD247D2B9B00C019C5 /* Frameworks */,
+				190296DE247D2B9B00C019C5 /* Resources */,
+				19029713247D3A5600C019C5 /* Copy Carthage Frameworks */,
+				190296FE247D2C9400C019C5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerminalExample;
+			productName = TerminalExample;
+			productReference = 190296E0247D2B9B00C019C5 /* TerminalExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		190296C8247D280200C019C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = dnpp.org;
+				TargetAttributes = {
+					190296DF247D2B9B00C019C5 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 190296CB247D280200C019C5 /* Build configuration list for PBXProject "TerminalExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 190296C7247D280200C019C5;
+			productRefGroup = 190296E1247D2B9B00C019C5 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 190296F6247D2C8000C019C5 /* Products */;
+					ProjectRef = 190296F5247D2C8000C019C5 /* Terminal.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				190296DF247D2B9B00C019C5 /* TerminalExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		190296FA247D2C8000C019C5 /* Terminal.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Terminal.framework;
+			remoteRef = 190296F9247D2C8000C019C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		190296DE247D2B9B00C019C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190296F0247D2B9D00C019C5 /* LaunchScreen.storyboard in Resources */,
+				190296ED247D2B9D00C019C5 /* Assets.xcassets in Resources */,
+				191EC52E249BB4A40058507E /* InputAccessoryView.xib in Resources */,
+				190296EB247D2B9B00C019C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19029710247D39EE00C019C5 /* Run SwiftLint Auto Correct */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Auto Correct";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		19029711247D3A1B00C019C5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		19029713247D3A5600C019C5 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/NMSSH.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		190296DC247D2B9B00C019C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190296E8247D2B9B00C019C5 /* SSHTextViewController.swift in Sources */,
+				199E03DD248FDD4200E8BE10 /* Number+fallback.swift in Sources */,
+				19A8415A248F81C5008FB52D /* KeyboardNotificationObservable.swift in Sources */,
+				191EC52B249BB3EF0058507E /* NibCreatable.swift in Sources */,
+				19A84156248F8161008FB52D /* KeyboardLayoutGuide.swift in Sources */,
+				191EC528249BB3470058507E /* InputAccessoryView.swift in Sources */,
+				19A84158248F8190008FB52D /* Notification+Keyboard.swift in Sources */,
+				1930D0A02480202100882D16 /* SSHTerminalViewController.swift in Sources */,
+				1930D0A2248021C400882D16 /* TerminalViewController.swift in Sources */,
+				199E03DB248FCDCD00E8BE10 /* KeyboardPicker.swift in Sources */,
+				190296E4247D2B9B00C019C5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		190296E9247D2B9B00C019C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				190296EA247D2B9B00C019C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		190296EE247D2B9D00C019C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				190296EF247D2B9D00C019C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		190296CC247D280200C019C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		190296CD247D280200C019C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		190296F3247D2B9D00C019C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = HF9783QUPL;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = TerminalExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dnpp.TerminalExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		190296F4247D2B9D00C019C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HF9783QUPL;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = TerminalExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.dnpp.TerminalExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		190296CB247D280200C019C5 /* Build configuration list for PBXProject "TerminalExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				190296CC247D280200C019C5 /* Debug */,
+				190296CD247D280200C019C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		190296F2247D2B9D00C019C5 /* Build configuration list for PBXNativeTarget "TerminalExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				190296F3247D2B9D00C019C5 /* Debug */,
+				190296F4247D2B9D00C019C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 190296C8247D280200C019C5 /* Project object */;
+}

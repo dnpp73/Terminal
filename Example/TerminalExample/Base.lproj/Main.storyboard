@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UuF-j0-W3u">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="nfA-47-Frq">
+            <objects>
+                <tableViewController id="GvO-yd-U4k" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="DI6-kj-gIc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="SSH" id="Cdb-Pf-pcD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Agc-ap-JJt" style="IBUITableViewCellStyleDefault" id="RkM-FX-QWI">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RkM-FX-QWI" id="FVr-Lb-IHJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SSH with UITextView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Agc-ap-JJt">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="MQ6-aN-qhv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="4zs-YU-qYp" style="IBUITableViewCellStyleDefault" id="yfx-bI-tjY">
+                                        <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yfx-bI-tjY" id="fNc-3d-SQ9">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SSH with Terminal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4zs-YU-qYp">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DqV-Ua-Ork" kind="show" id="2tb-Ls-6Yz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="hterm" id="ncq-QS-uD0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="10" textLabel="LhY-vd-iTg" style="IBUITableViewCellStyleDefault" id="hgO-xh-Bqm">
+                                        <rect key="frame" x="0.0" y="199.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgO-xh-Bqm" id="HRc-Ns-luh">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Terminal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LhY-vd-iTg">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gt2-3d-Y6L" kind="show" id="yaL-ma-PNH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="GvO-yd-U4k" id="FGr-VU-6hb"/>
+                            <outlet property="delegate" destination="GvO-yd-U4k" id="STp-NY-p0K"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Menu" id="g5k-Pr-j1V"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYG-Dy-8nx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3qP-cA-Ynw">
+            <objects>
+                <navigationController id="UuF-j0-W3u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uSa-vx-q7V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GvO-yd-U4k" kind="relationship" relationship="rootViewController" id="BCI-Wk-xzZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="say-vV-aT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1639" y="138"/>
+        </scene>
+        <!--SSH UITextView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SSHTextViewController" customModule="TerminalExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-WS-fvQ">
+                                <rect key="frame" x="8" y="96" width="398" height="53"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-KK-4es">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-WT-gsd">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="14"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ubuntu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2q-eJ-0jc">
+                                                <rect key="frame" x="0.0" y="19" width="88" height="34"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-qn-HJW">
+                                        <rect key="frame" x="98" y="0.0" width="190" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ea-ur-Wak">
+                                                <rect key="frame" x="0.0" y="0.0" width="190" height="14"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mmn61.local:32772" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ras-1I-PHh">
+                                                <rect key="frame" x="0.0" y="19" width="190" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="190" id="dao-3I-Pdo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xp5-Hc-J8L">
+                                        <rect key="frame" x="298" y="0.0" width="100" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eph-9h-2fS">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="14"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ubuntu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eEI-Y6-EGH">
+                                                <rect key="frame" x="0.0" y="19" width="100" height="34"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-oQ-bwH">
+                                <rect key="frame" x="0.0" y="157" width="414" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6yz-GT-iWz"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZK0-oQ-bwH" secondAttribute="bottom" id="VmQ-QK-sb8"/>
+                            <constraint firstItem="ZK0-oQ-bwH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b11-9s-1cB"/>
+                            <constraint firstItem="ZK0-oQ-bwH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gMc-xT-jFl"/>
+                            <constraint firstItem="aCc-WS-fvQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="hMU-SI-hZQ"/>
+                            <constraint firstItem="ZK0-oQ-bwH" firstAttribute="top" secondItem="aCc-WS-fvQ" secondAttribute="bottom" constant="8" id="qAi-3h-jxm"/>
+                            <constraint firstItem="aCc-WS-fvQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="rKN-N7-zLz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aCc-WS-fvQ" secondAttribute="trailing" constant="8" id="xJh-Mn-96f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SSH UITextView" id="res-Ab-hZ5">
+                        <barButtonItem key="rightBarButtonItem" title="Connect" id="358-JM-hfh">
+                            <connections>
+                                <action selector="handleActionBarButtonItem:" destination="BYZ-38-t0r" id="bit-KA-fyg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionBarButtonItem" destination="358-JM-hfh" id="NIV-Gx-ePG"/>
+                        <outlet property="hostNameTextField" destination="Ras-1I-PHh" id="M1V-2f-I2E"/>
+                        <outlet property="passwordTextField" destination="eEI-Y6-EGH" id="PEI-rD-PuA"/>
+                        <outlet property="textView" destination="ZK0-oQ-bwH" id="7nr-bb-5RD"/>
+                        <outlet property="userNameTextField" destination="O2q-eJ-0jc" id="t3A-Es-Gec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--SSH Terminal-->
+        <scene sceneID="2bI-TW-faW">
+            <objects>
+                <viewController id="DqV-Ua-Ork" customClass="SSHTerminalViewController" customModule="TerminalExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJB-ap-kwa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y8D-AM-OFl">
+                                <rect key="frame" x="8" y="96" width="398" height="131"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bJf-u4-eXa">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="53"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y5y-iF-8Z3">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDH-3D-smu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ubuntu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBh-bE-L10">
+                                                        <rect key="frame" x="0.0" y="19" width="88" height="34"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Oao-V3-qGe">
+                                                <rect key="frame" x="98" y="0.0" width="190" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkA-Yu-3eM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mmn61.local:32772" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Jd-9i-tkh">
+                                                        <rect key="frame" x="0.0" y="19" width="190" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="190" id="VbA-ic-kZo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-uj-oYz">
+                                                <rect key="frame" x="298" y="0.0" width="100" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz1-gt-y5d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ubuntu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Wu-kl-3jc">
+                                                        <rect key="frame" x="0.0" y="19" width="100" height="34"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DsY-TS-lf3">
+                                        <rect key="frame" x="0.0" y="58" width="398" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yr-ob-FxE" customClass="KeyboardPicker" customModule="TerminalExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="fontSize"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9e-T2-RIZ" customClass="KeyboardPicker" customModule="TerminalExample" customModuleProvider="target">
+                                                <rect key="frame" x="48.5" y="0.0" width="53.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="cursorShape"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t47-Ot-tMR" customClass="KeyboardPicker" customModule="TerminalExample" customModuleProvider="target">
+                                                <rect key="frame" x="112" y="0.0" width="53.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="cursorBlink"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYw-Be-N7h">
+                                                <rect key="frame" x="175.5" y="0.0" width="73" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="clearScrollback"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideClearScrollbackButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="Rn3-B0-sgX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jje-sZ-Cba">
+                                                <rect key="frame" x="258.5" y="0.0" width="34" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="reset"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideResetButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="b36-D7-SvF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enR-aH-Aga">
+                                                <rect key="frame" x="302.5" y="0.0" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="softReset"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideSoftResetButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="XAX-ue-oLc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPk-hl-gNZ">
+                                                <rect key="frame" x="355.5" y="0.0" width="42.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="reload"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideReload:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="LtV-th-XZx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4bE-lX-D0G">
+                                        <rect key="frame" x="0.0" y="84" width="398" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FL3-aw-vDF">
+                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollHome"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollHome:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="IzG-bF-caQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r0-nI-If8">
+                                                <rect key="frame" x="58.5" y="0.0" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollEnd"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollEnd:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="poP-Dc-s7l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGc-l9-Jxk">
+                                                <rect key="frame" x="111.5" y="0.0" width="57.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollPageUp"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollPageUp:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="YRk-QZ-2My"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYa-Lb-3Cp">
+                                                <rect key="frame" x="179" y="0.0" width="67.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollPageDown"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollPageDown:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="xfC-ug-5Jx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS7-CA-jke">
+                                                <rect key="frame" x="256.5" y="0.0" width="57.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollLineUp"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollLineUp:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="Y0u-Du-xDh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-qi-aHt">
+                                                <rect key="frame" x="324" y="0.0" width="74" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollLineDown"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollLineDown:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="hYR-JR-UTK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W9w-kf-2Ke">
+                                        <rect key="frame" x="0.0" y="110" width="398" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="957-iD-1Da">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="Mode: input"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideModeButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="wRy-1K-lOu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-sI-hJt">
+                                                <rect key="frame" x="57" y="0.0" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="Editable: false"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideEditableChangeButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="do1-u5-9tw"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-7F-vr8">
+                                                <rect key="frame" x="131" y="0.0" width="267" height="21"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89W-Dw-AT8" customClass="TerminalView" customModule="Terminal">
+                                <rect key="frame" x="0.0" y="235" width="414" height="627"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="terminalBackgroundColor">
+                                        <color key="value" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="terminalForegroundColor">
+                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="terminalCursorColor">
+                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="terminalFontSize">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="89W-Dw-AT8" firstAttribute="leading" secondItem="N5w-AX-GAe" secondAttribute="leading" id="4yn-Gf-Gf0"/>
+                            <constraint firstItem="89W-Dw-AT8" firstAttribute="top" secondItem="Y8D-AM-OFl" secondAttribute="bottom" constant="8" id="8eH-a7-wrm"/>
+                            <constraint firstItem="Y8D-AM-OFl" firstAttribute="leading" secondItem="N5w-AX-GAe" secondAttribute="leading" constant="8" id="HjK-rL-mSQ"/>
+                            <constraint firstItem="N5w-AX-GAe" firstAttribute="trailing" secondItem="Y8D-AM-OFl" secondAttribute="trailing" constant="8" id="Qyl-KV-vpt"/>
+                            <constraint firstItem="N5w-AX-GAe" firstAttribute="bottom" secondItem="89W-Dw-AT8" secondAttribute="bottom" placeholder="YES" id="fTR-so-ywJ"/>
+                            <constraint firstItem="N5w-AX-GAe" firstAttribute="trailing" secondItem="89W-Dw-AT8" secondAttribute="trailing" id="foF-HP-Exj"/>
+                            <constraint firstItem="Y8D-AM-OFl" firstAttribute="top" secondItem="N5w-AX-GAe" secondAttribute="top" constant="8" id="q2D-fY-P5R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N5w-AX-GAe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SSH Terminal" id="pev-3h-fCL">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Connect" id="lBD-Me-bL2">
+                            <connections>
+                                <action selector="handleActionBarButtonItem:" destination="DqV-Ua-Ork" id="cNE-RS-r7f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionBarButtonItem" destination="lBD-Me-bL2" id="4bi-vf-Nly"/>
+                        <outlet property="cursorBlinkPicker" destination="t47-Ot-tMR" id="V4v-de-pe6"/>
+                        <outlet property="cursorShapePicker" destination="e9e-T2-RIZ" id="nVB-Kt-HVV"/>
+                        <outlet property="fontSizePicker" destination="3yr-ob-FxE" id="4DE-z6-EIA"/>
+                        <outlet property="hostNameTextField" destination="8Jd-9i-tkh" id="qry-rh-7gr"/>
+                        <outlet property="passwordTextField" destination="2Wu-kl-3jc" id="M0f-TY-8k9"/>
+                        <outlet property="terminalModeChangeButton" destination="957-iD-1Da" id="9QV-jT-ZP1"/>
+                        <outlet property="terminalView" destination="89W-Dw-AT8" id="Hxc-QX-mjt"/>
+                        <outlet property="userNameTextField" destination="rBh-bE-L10" id="jnm-s3-6ew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fas-aV-1SO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="916.74107142857133"/>
+        </scene>
+        <!--hterm-->
+        <scene sceneID="Dg7-R6-QOS">
+            <objects>
+                <viewController id="gt2-3d-Y6L" customClass="TerminalViewController" customModule="TerminalExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y2F-Kh-TIU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Isp-sq-oXP">
+                                <rect key="frame" x="8" y="96" width="398" height="73"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mbA-JF-mSi">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFf-1n-cKE" customClass="KeyboardPicker" customModule="TerminalExample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="fontSize"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6w-un-KKN" customClass="KeyboardPicker" customModule="TerminalExample" customModuleProvider="target">
+                                                <rect key="frame" x="48.5" y="0.0" width="53.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="cursorShape"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc9-Wr-o0s" customClass="KeyboardPicker" customModule="TerminalExample" customModuleProvider="target">
+                                                <rect key="frame" x="112" y="0.0" width="53.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="cursorBlink"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQn-l1-RXQ">
+                                                <rect key="frame" x="175.5" y="0.0" width="73" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="clearScrollback"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideClearScrollbackButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="Oaz-T8-9KH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khL-Us-bZI">
+                                                <rect key="frame" x="258.5" y="0.0" width="34" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="reset"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideResetButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="Bke-x4-18w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvu-Tv-bIw">
+                                                <rect key="frame" x="302.5" y="0.0" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="softReset"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideSoftResetButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="zcm-GR-KhX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ame-26-ucf">
+                                                <rect key="frame" x="355.5" y="0.0" width="42.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="reload"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideReload:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="rcj-N5-dbu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HLz-dh-0dD">
+                                        <rect key="frame" x="0.0" y="26" width="398" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8b-js-fvW">
+                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollHome"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollHome:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="zou-Zm-mZ0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDE-cb-RWu">
+                                                <rect key="frame" x="58.5" y="0.0" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollEnd"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollEnd:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="PwH-1x-Cda"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0s-IE-EgT">
+                                                <rect key="frame" x="111.5" y="0.0" width="57.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollPageUp"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollPageUp:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="Qw4-pM-pMx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF6-Ao-2e6">
+                                                <rect key="frame" x="179" y="0.0" width="67.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollPageDown"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollPageDown:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="sFU-EN-oNC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOe-ww-d0C">
+                                                <rect key="frame" x="256.5" y="0.0" width="57.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollLineUp"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollLineUp:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="xRy-rL-jR1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-hH-Pcg">
+                                                <rect key="frame" x="324" y="0.0" width="74" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="scrollLineDown"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideScrollLineDown:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="NBy-TY-WxA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ibt-ha-fIZ">
+                                        <rect key="frame" x="0.0" y="52" width="398" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ski-QY-12R">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="Mode: input"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideModeButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="Fan-vd-pMX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40G-hs-Mus">
+                                                <rect key="frame" x="57" y="0.0" width="64" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="Editable: false"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideEditableChangeButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="cwE-rw-NEo"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Qeo-PW-Z6T">
+                                                <rect key="frame" x="131" y="0.0" width="267" height="21"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tS-zk-noS" customClass="TerminalView" customModule="Terminal">
+                                <rect key="frame" x="8" y="177" width="398" height="685"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="terminalBackgroundColor">
+                                        <color key="value" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="terminalForegroundColor">
+                                        <color key="value" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="terminalCursorColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jnt-Ro-ch7" firstAttribute="bottom" secondItem="8tS-zk-noS" secondAttribute="bottom" placeholder="YES" id="37R-ko-vxz"/>
+                            <constraint firstItem="8tS-zk-noS" firstAttribute="top" secondItem="Isp-sq-oXP" secondAttribute="bottom" constant="8" id="9ZO-xT-9gm"/>
+                            <constraint firstItem="Isp-sq-oXP" firstAttribute="top" secondItem="Jnt-Ro-ch7" secondAttribute="top" constant="8" id="E6h-AE-NQJ"/>
+                            <constraint firstItem="Isp-sq-oXP" firstAttribute="leading" secondItem="Jnt-Ro-ch7" secondAttribute="leading" constant="8" id="YSu-Fd-hgF"/>
+                            <constraint firstItem="8tS-zk-noS" firstAttribute="leading" secondItem="Jnt-Ro-ch7" secondAttribute="leading" constant="8" id="bwH-AK-zCn"/>
+                            <constraint firstItem="Jnt-Ro-ch7" firstAttribute="trailing" secondItem="8tS-zk-noS" secondAttribute="trailing" constant="8" id="fsd-JO-dkq"/>
+                            <constraint firstItem="Jnt-Ro-ch7" firstAttribute="trailing" secondItem="Isp-sq-oXP" secondAttribute="trailing" constant="8" id="qdm-2Y-t9U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jnt-Ro-ch7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="hterm" id="lM3-uC-gpn"/>
+                    <connections>
+                        <outlet property="cursorBlinkPicker" destination="Lc9-Wr-o0s" id="qc7-an-Pth"/>
+                        <outlet property="cursorShapePicker" destination="A6w-un-KKN" id="8Ez-Df-Hcg"/>
+                        <outlet property="fontSizePicker" destination="CFf-1n-cKE" id="3Rq-2g-LyC"/>
+                        <outlet property="terminalModeChangeButton" destination="ski-QY-12R" id="sVy-6P-VkL"/>
+                        <outlet property="terminalView" destination="8tS-zk-noS" id="GRh-73-uck"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9O-TX-rn1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="1676.7857142857142"/>
+        </scene>
+    </scenes>
+</document>

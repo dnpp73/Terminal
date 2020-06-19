@@ -1,0 +1,30 @@
+html, body {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    -webkit-tap-highlight-color:  transparent;
+    font-feature-settings: "liga" 0;
+}
+
+ime {
+    display: block;
+    position: absolute;
+    min-height: var(--hterm-charsize-height);
+    max-width: 100%;
+    z-index: 1000;
+    overflow-wrap: break-word;
+}
+
+#terminal {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
