@@ -21,6 +21,7 @@ If need ssh, you could use [`NMSSH/NMSSH`](https://github.com/NMSSH/NMSSH) libra
 ## Features
 
 - supports iOS 11 ~ (iOS 12 or above recommended)
+- supports Interface Builder creation
 - supports GUI selection, select all, copy, paste
 - supports hardware keyboard input
 - supports CJK IME (little buggy...)
