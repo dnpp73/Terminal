@@ -189,20 +189,15 @@ public final class TerminalView: UIView {
         textInputStringTokenizerForIMEHack = UITextInputStringTokenizer(textInput: self)
 
         registerKeyCommands()
+
+        htermWebView.reloadHterm()
     }
 
     // MARK: - UIView
 
-    override public func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        if let _ = superview {
-            htermWebView?.reloadHterm()
-        }
-    }
-
     override public func layoutSubviews() {
         super.layoutSubviews()
-        guard let hterm = htermWebView else {
+        guard let hterm = htermWebView, hterm.isHtermLoaded else {
             return
         }
         var data: Data?
