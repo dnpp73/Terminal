@@ -50,6 +50,8 @@
 		194A3EBF248A8176005CCAF0 /* String+SpecialKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SpecialKeys.swift"; sourceTree = "<group>"; };
 		194A3EC1248A91D4005CCAF0 /* Character+Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Control.swift"; sourceTree = "<group>"; };
 		195BB024248AC64C00AB0DCA /* debugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debugLog.swift; sourceTree = "<group>"; };
+		19894269249D2E9700CBF00E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		1989426A249D2E9800CBF00E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		19908883249A2F0C002E4C61 /* UIGestureRecognizer+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Cancel.swift"; sourceTree = "<group>"; };
 		199E03D7248F9A5A00E8BE10 /* UIColor+CSSString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CSSString.swift"; sourceTree = "<group>"; };
 		19BB8F0A2495269400909321 /* TerminalEraseEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalEraseEvent.swift; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		190296D5247D2A8900C019C5 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
+				19894269249D2E9700CBF00E /* LICENSE */,
+				1989426A249D2E9800CBF00E /* README.md */,
 				19029703247D383000C019C5 /* Information */,
 				19029704247D386300C019C5 /* dotfiles */,
 				193FEBE6247FF138004EC6F9 /* bin */,
