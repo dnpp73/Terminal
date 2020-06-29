@@ -540,6 +540,24 @@ public final class TerminalView: UIView {
         htermWebView?.reloadHterm()
     }
 
+    // MARK: - Get Drawing Text
+
+    public func getVisibleText(callback: @escaping ((String) -> Void)) {
+        guard let htermWebView = htermWebView else {
+            callback("")
+            return
+        }
+        htermWebView.getVisibleText(callback: callback)
+    }
+
+    public func getAllText(callback: @escaping ((String) -> Void)) {
+        guard let htermWebView = htermWebView else {
+            callback("")
+            return
+        }
+        htermWebView.getAllText(callback: callback)
+    }
+
 }
 
 // MARK: - UIKeyInput

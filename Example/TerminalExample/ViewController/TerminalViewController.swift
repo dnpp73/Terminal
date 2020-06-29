@@ -107,6 +107,18 @@ final class TerminalViewController: UIViewController, TerminalViewDelegate, Keyb
         sender.setTitle("Editable: \(t.isTerminalContentEditable)", for: .normal)
     }
 
+    @IBAction private func handleTouchUpInsideGetVisibleTextButton(_ sender: UIButton) {
+        terminalView?.getVisibleText {
+            print($0)
+        }
+    }
+
+    @IBAction private func handleTouchUpInsideGetAllTextButton(_ sender: UIButton) {
+        terminalView?.getAllText {
+            print($0)
+        }
+    }
+
     func terminalViewDidLoad(_ terminalView: TerminalView) {
         print("[TerminalViewController(TerminalViewDelegate).terminalViewDidLoad:]")
     }

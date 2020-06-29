@@ -410,8 +410,24 @@
                                                     <action selector="handleTouchUpInsideEditableChangeButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="do1-u5-9tw"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lky-xW-j6B">
+                                                <rect key="frame" x="131" y="0.0" width="60" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="getVisibleText"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideGetVisibleTextButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="liO-im-dbj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBn-l6-EJ4">
+                                                <rect key="frame" x="201" y="0.0" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="getAllText"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideGetAllTextButton:" destination="DqV-Ua-Ork" eventType="touchUpInside" id="28M-Ew-Mde"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-7F-vr8">
-                                                <rect key="frame" x="131" y="0.0" width="267" height="21"/>
+                                                <rect key="frame" x="254" y="0.0" width="144" height="21"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -592,7 +608,7 @@
                                         <rect key="frame" x="0.0" y="52" width="398" height="21"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ski-QY-12R">
-                                                <rect key="frame" x="0.0" y="0.0" width="47" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="21"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
                                                 <state key="normal" title="Mode: input"/>
                                                 <connections>
@@ -600,15 +616,31 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40G-hs-Mus">
-                                                <rect key="frame" x="57" y="0.0" width="64" height="21"/>
+                                                <rect key="frame" x="74" y="0.0" width="64" height="21"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
                                                 <state key="normal" title="Editable: false"/>
                                                 <connections>
                                                     <action selector="handleTouchUpInsideEditableChangeButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="cwE-rw-NEo"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGK-Hl-fTk">
+                                                <rect key="frame" x="148" y="0.0" width="60" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="getVisibleText"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideGetVisibleTextButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="2ce-Ss-dBV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Deb-HE-cqV">
+                                                <rect key="frame" x="218" y="0.0" width="43" height="21"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="7"/>
+                                                <state key="normal" title="getAllText"/>
+                                                <connections>
+                                                    <action selector="handleTouchUpInsideGetAllTextButton:" destination="gt2-3d-Y6L" eventType="touchUpInside" id="Auj-bd-YWs"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Qeo-PW-Z6T">
-                                                <rect key="frame" x="131" y="0.0" width="267" height="21"/>
+                                                <rect key="frame" x="271" y="0.0" width="127" height="21"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>

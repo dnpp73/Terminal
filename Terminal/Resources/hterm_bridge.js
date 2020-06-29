@@ -110,6 +110,17 @@ const onTerminalReady = () => {
         term.accessibilityReader_.hasUserGesture = true;
     };
 
+    exports.getVisibleText = () => {
+        const start = term.scrollPort_.getTopRowIndex();
+        const end = term.scrollPort_.getBottomRowIndex(start) + 1;
+        return term.getRowsText(start, end);
+    };
+
+    exports.getAllText = () => {
+        const end = term.getRowCount();
+        return term.getRowsText(0, end);
+    };
+
     hterm.openUrl = (url) => {
         native.htermDidHandleURL(url);
     };

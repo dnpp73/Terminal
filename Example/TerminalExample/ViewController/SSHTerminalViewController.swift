@@ -154,6 +154,18 @@ final class SSHTerminalViewController: UIViewController {
         sender.setTitle("Editable: \(t.isTerminalContentEditable)", for: .normal)
     }
 
+    @IBAction private func handleTouchUpInsideGetVisibleTextButton(_ sender: UIButton) {
+        terminalView?.getVisibleText {
+            print($0)
+        }
+    }
+
+    @IBAction private func handleTouchUpInsideGetAllTextButton(_ sender: UIButton) {
+        terminalView?.getAllText {
+            print($0)
+        }
+    }
+
     // MARK: - SSH Connection
 
     private func connect() {

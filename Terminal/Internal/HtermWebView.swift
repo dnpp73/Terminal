@@ -481,4 +481,48 @@ extension HtermWebView {
         evaluateJavaScript("exports.setUserGesture()")
     }
 
+    func getVisibleText(callback: @escaping ((String) -> Void)) {
+        guard isHtermLoaded else {
+            callback("")
+            return
+        }
+        evaluateJavaScript("exports.getVisibleText()") { (result: Any?, error: Error?) -> Void in
+            onMain {
+                if let error = error {
+                    print("[ERROR] [HtermWebView.getVisibleText(): exports.getVisibleText()] error: \(error)")
+                    callback("")
+                    return
+                }
+                guard let result = result as? String else {
+                    print("[ERROR] [HtermWebView.getVisibleText(): exports.getVisibleText()] result is not String")
+                    callback("")
+                    return
+                }
+                callback(result)
+            }
+        }
+    }
+
+    func getAllText(callback: @escaping ((String) -> Void)) {
+        guard isHtermLoaded else {
+            callback("")
+            return
+        }
+        evaluateJavaScript("exports.getAllText()") { (result: Any?, error: Error?) -> Void in
+            onMain {
+                if let error = error {
+                    print("[ERROR] [HtermWebView.getAllText(): exports.getAllText()] error: \(error)")
+                    callback("")
+                    return
+                }
+                guard let result = result as? String else {
+                    print("[ERROR] [HtermWebView.getAllText(): exports.getAllText()] result is not String")
+                    callback("")
+                    return
+                }
+                callback(result)
+            }
+        }
+    }
+
 }
