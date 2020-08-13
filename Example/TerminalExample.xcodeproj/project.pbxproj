@@ -14,7 +14,6 @@
 		190296F0247D2B9D00C019C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190296EE247D2B9D00C019C5 /* LaunchScreen.storyboard */; };
 		190296FC247D2C9400C019C5 /* Terminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190296FA247D2C8000C019C5 /* Terminal.framework */; };
 		190296FD247D2C9400C019C5 /* Terminal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 190296FA247D2C8000C019C5 /* Terminal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		19029702247D308900C019C5 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19029700247D308900C019C5 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		191EC528249BB3470058507E /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EC527249BB3470058507E /* InputAccessoryView.swift */; };
 		191EC52B249BB3EF0058507E /* NibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191EC529249BB3EF0058507E /* NibCreatable.swift */; };
 		191EC52E249BB4A40058507E /* InputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191EC52D249BB4A40058507E /* InputAccessoryView.xib */; };
@@ -45,7 +44,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				190296FD247D2C9400C019C5 /* Terminal.framework in Embed Frameworks */,
-				19029702247D308900C019C5 /* NMSSH.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
