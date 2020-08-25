@@ -18,6 +18,11 @@ final class SSHTextViewController: UIViewController {
     @IBOutlet private var textView: UITextView!
     @IBOutlet private var actionBarButtonItem: UIBarButtonItem!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hostNameTextField?.text = UserDefaults.standard.string(forKey: kSSHHostNameDefaultsKey)
+    }
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         disconnect()
@@ -80,6 +85,10 @@ final class SSHTextViewController: UIViewController {
         guard let user = userNameTextField?.text, let host = hostNameTextField?.text, let pass = passwordTextField?.text else {
             return
         }
+
+        UserDefaults.standard.set(host, forKey: kSSHHostNameDefaultsKey)
+        UserDefaults.standard.synchronize()
+
         sshQueue.async {
             let session = NMSSHSession.connect(toHost: host, withUsername: user)
             self.session = session

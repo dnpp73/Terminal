@@ -45,6 +45,8 @@ final class SSHTerminalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        hostNameTextField?.text = UserDefaults.standard.string(forKey: kSSHHostNameDefaultsKey)
+
         terminalInputAccessoryView?.terminalView = terminalView
 
         terminalView.delegate = self
@@ -172,6 +174,9 @@ final class SSHTerminalViewController: UIViewController {
         guard let user = userNameTextField?.text, let host = hostNameTextField?.text, let pass = passwordTextField?.text else {
             return
         }
+
+        UserDefaults.standard.set(host, forKey: kSSHHostNameDefaultsKey)
+        UserDefaults.standard.synchronize()
 
         let s = terminalView.terminalSize
         let w = UInt(s.cols)
