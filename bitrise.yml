@@ -1,0 +1,84 @@
+---
+  format_version: '8'
+  default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+  project_type: ios
+  trigger_map:
+  - push_branch: master
+    workflow: deploy_testflight
+  workflows:
+    setup:
+      steps:
+      - slack@3:
+          inputs:
+          - pretext: "*Setup Started!*"
+          - webhook_url: "$SLACK_HOOK_URL"
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@4: {}
+      - ios-auto-provision-appstoreconnect@0:
+          inputs:
+          - distribution_type: app-store
+      - cache-pull@2: {}
+      - brew-install@0:
+          inputs:
+          - upgrade: 'no'
+          - packages: swiftlint carthage
+      - carthage@3:
+          inputs:
+          - carthage_options: "--project-directory Example --platform ios --cache-builds
+              --no-use-binaries"
+          - carthage_command: bootstrap
+      - cache-push@2:
+          inputs:
+          - cache_paths: |
+              $BITRISE_CACHE_DIR
+              ./Example/Carthage -> ./Example/Carthage/Cachefile
+    build:
+      steps:
+      - set-xcode-build-number@1:
+          inputs:
+          - build_version_offset: ''
+          - plist_path: Example/TerminalExample/Info.plist
+      - xcode-archive@2:
+          inputs:
+          - project_path: "$BITRISE_PROJECT_PATH"
+          - scheme: "$BITRISE_SCHEME"
+          - export_method: app-store
+      - slack@3:
+          inputs:
+          - webhook_url: "$SLACK_HOOK_URL"
+      before_run:
+      - setup
+    test:
+      steps:
+      - xcode-analyze@2: {}
+      - xcode-test@2: {}
+      before_run:
+      - setup
+    deploy_testflight:
+      steps:
+      - deploy-to-bitrise-io@1:
+          inputs:
+          - is_enable_public_page: 'false'
+      - deploy-to-itunesconnect-application-loader@0:
+          inputs:
+          - api_key_path: "$BITRISEIO_APP_STORE_CONNECT_AUTH_KEY_URL"
+          - api_issuer: "$APP_STORE_CONNECT_ISSUER"
+      - slack@3:
+          inputs:
+          - pretext: "*Upload Succeeded!*"
+          - pretext_on_error: "*Upload Failed!*"
+          - webhook_url: "$SLACK_HOOK_URL"
+      before_run:
+      - build
+  app:
+    envs:
+    - opts:
+        is_expand: false
+      BITRISE_PROJECT_PATH: Example/TerminalExample.xcodeproj
+    - opts:
+        is_expand: false
+      BITRISE_SCHEME: TerminalExample
+    - opts:
+        is_expand: false
+      BITRISE_EXPORT_METHOD: app-store

@@ -211,3 +211,4 @@ vendor
 !.gitkeep
 
 /Terminal/Resources/hterm_all.js
+.bitrise.secrets.yml
