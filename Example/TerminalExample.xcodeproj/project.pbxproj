@@ -68,6 +68,7 @@
 		191EC52D249BB4A40058507E /* InputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputAccessoryView.xib; sourceTree = "<group>"; };
 		1930D09F2480202100882D16 /* SSHTerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSHTerminalViewController.swift; sourceTree = "<group>"; };
 		1930D0A1248021C400882D16 /* TerminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalViewController.swift; sourceTree = "<group>"; };
+		193396D725549EA100B7C772 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
 		199E03DA248FCDCD00E8BE10 /* KeyboardPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPicker.swift; sourceTree = "<group>"; };
 		199E03DC248FDD4200E8BE10 /* Number+fallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+fallback.swift"; sourceTree = "<group>"; };
 		19A84155248F8161008FB52D /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 				190296F5247D2C8000C019C5 /* Terminal.xcodeproj */,
 				19029707247D38A300C019C5 /* dotfiles */,
 				1902970B247D390400C019C5 /* Dependency */,
+				193396D625549EA100B7C772 /* bin */,
 				190296E2247D2B9B00C019C5 /* TerminalExample */,
 				190296E1247D2B9B00C019C5 /* Products */,
 				190296FB247D2C9400C019C5 /* Frameworks */,
@@ -164,6 +166,14 @@
 				191EC52D249BB4A40058507E /* InputAccessoryView.xib */,
 			);
 			path = InputAccessoryView;
+			sourceTree = "<group>";
+		};
+		193396D625549EA100B7C772 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				193396D725549EA100B7C772 /* carthage.sh */,
+			);
+			path = bin;
 			sourceTree = "<group>";
 		};
 		19A84151248F7FC1008FB52D /* ViewController */ = {

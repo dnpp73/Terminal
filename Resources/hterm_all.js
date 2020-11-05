@@ -22474,7 +22474,7 @@ lib.resource.add('hterm/images/icon-96', 'image/png;base64',
 );
 
 lib.resource.add('hterm/concat/date', 'text/plain',
-'Thu, 28 May 2020 13:20:03 +0000'
+'Thu, 05 Nov 2020 20:57:40 +0000'
 );
 
 lib.resource.add('hterm/changelog/version', 'text/plain',
