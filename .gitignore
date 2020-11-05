@@ -214,5 +214,4 @@ vendor
 /.build
 /.swiftpm
 
-/Resources/hterm_all.js
 .bitrise.secrets.yml
