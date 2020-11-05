@@ -33,8 +33,8 @@
 		190296D3247D2A8900C019C5 /* Terminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Terminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		190296D6247D2A8900C019C5 /* Terminal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Terminal.h; sourceTree = "<group>"; };
 		190296D7247D2A8900C019C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19029705247D388C00C019C5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
-		19029706247D388C00C019C5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		19029705247D388C00C019C5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		19029706247D388C00C019C5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		19029715247D3AE600C019C5 /* TerminalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalView.swift; sourceTree = "<group>"; };
 		190F4A2924854179001A313A /* HtermWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtermWebView.swift; sourceTree = "<group>"; };
 		191819DA2495030E008B8E0E /* TerminalKeyDownEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalKeyDownEvent.swift; sourceTree = "<group>"; };
@@ -46,12 +46,12 @@
 		1930D0A52480237F00882D16 /* hterm.html */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.html; path = hterm.html; sourceTree = "<group>"; tabWidth = 2; };
 		1930D0A9248030AB00882D16 /* UIView+EdgeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EdgeConstraints.swift"; sourceTree = "<group>"; };
 		1932B3FC24925215003E9AFD /* WKWebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtension.swift; sourceTree = "<group>"; };
-		193FEBE7247FF144004EC6F9 /* build_hterm.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_hterm.sh; sourceTree = SOURCE_ROOT; };
+		193FEBE7247FF144004EC6F9 /* build_hterm.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_hterm.sh; sourceTree = "<group>"; };
 		194A3EBF248A8176005CCAF0 /* String+SpecialKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SpecialKeys.swift"; sourceTree = "<group>"; };
 		194A3EC1248A91D4005CCAF0 /* Character+Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Control.swift"; sourceTree = "<group>"; };
 		195BB024248AC64C00AB0DCA /* debugLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debugLog.swift; sourceTree = "<group>"; };
-		19894269249D2E9700CBF00E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		1989426A249D2E9800CBF00E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		19894269249D2E9700CBF00E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1989426A249D2E9800CBF00E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		19908883249A2F0C002E4C61 /* UIGestureRecognizer+Cancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGestureRecognizer+Cancel.swift"; sourceTree = "<group>"; };
 		199E03D7248F9A5A00E8BE10 /* UIColor+CSSString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CSSString.swift"; sourceTree = "<group>"; };
 		19BB8F0A2495269400909321 /* TerminalEraseEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalEraseEvent.swift; sourceTree = "<group>"; };
@@ -73,6 +73,12 @@
 		190296C0247D276B00C019C5 = {
 			isa = PBXGroup;
 			children = (
+				19894269249D2E9700CBF00E /* LICENSE */,
+				1989426A249D2E9800CBF00E /* README.md */,
+				19029704247D386300C019C5 /* dotfiles */,
+				193FEBE6247FF138004EC6F9 /* bin */,
+				193396D325549C4400B7C772 /* Sources */,
+				1930D09C24801D2100882D16 /* Resources */,
 				190296D5247D2A8900C019C5 /* Terminal */,
 				190296D4247D2A8900C019C5 /* Products */,
 			);
@@ -89,25 +95,10 @@
 		190296D5247D2A8900C019C5 /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
-				19894269249D2E9700CBF00E /* LICENSE */,
-				1989426A249D2E9800CBF00E /* README.md */,
-				19029703247D383000C019C5 /* Information */,
-				19029704247D386300C019C5 /* dotfiles */,
-				193FEBE6247FF138004EC6F9 /* bin */,
-				1930D09C24801D2100882D16 /* Resources */,
-				19029714247D3ACE00C019C5 /* Public */,
-				1930D0AB248030CD00882D16 /* Internal */,
-			);
-			path = Terminal;
-			sourceTree = "<group>";
-		};
-		19029703247D383000C019C5 /* Information */ = {
-			isa = PBXGroup;
-			children = (
 				190296D6247D2A8900C019C5 /* Terminal.h */,
 				190296D7247D2A8900C019C5 /* Info.plist */,
 			);
-			name = Information;
+			path = Terminal;
 			sourceTree = "<group>";
 		};
 		19029704247D386300C019C5 /* dotfiles */ = {
@@ -159,12 +150,21 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
+		193396D325549C4400B7C772 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				19029714247D3ACE00C019C5 /* Public */,
+				1930D0AB248030CD00882D16 /* Internal */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		193FEBE6247FF138004EC6F9 /* bin */ = {
 			isa = PBXGroup;
 			children = (
 				193FEBE7247FF144004EC6F9 /* build_hterm.sh */,
 			);
-			name = bin;
+			path = bin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -s \"${SRCROOT}/Terminal/Resources/hterm_all.js\" ]; then\n    echo \"hterm_all.js exists. skip building.\"\nelse\n    ${SRCROOT}/build_hterm.sh\nfi\n";
+			shellScript = "if [ -s \"${SRCROOT}/Resources/hterm_all.js\" ]; then\n    echo \"hterm_all.js exists. skip building.\"\nelse\n    ${SRCROOT}/bin/build_hterm.sh\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

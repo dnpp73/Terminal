@@ -210,5 +210,9 @@ $RECYCLE.BIN/
 vendor
 !.gitkeep
 
-/Terminal/Resources/hterm_all.js
+# Swift Package Manager
+/.build
+/.swiftpm
+
+/Resources/hterm_all.js
 .bitrise.secrets.yml

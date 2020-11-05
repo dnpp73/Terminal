@@ -60,9 +60,9 @@
 		190296F1247D2B9D00C019C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		190296F5247D2C8000C019C5 /* Terminal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Terminal.xcodeproj; path = ../Terminal.xcodeproj; sourceTree = "<group>"; };
 		19029700247D308900C019C5 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
-		19029709247D38CD00C019C5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
-		1902970D247D391A00C019C5 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		1902970E247D391A00C019C5 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
+		19029709247D38CD00C019C5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		1902970D247D391A00C019C5 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		1902970E247D391A00C019C5 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		191EC527249BB3470058507E /* InputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
 		191EC529249BB3EF0058507E /* NibCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCreatable.swift; sourceTree = "<group>"; };
 		191EC52D249BB4A40058507E /* InputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputAccessoryView.xib; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				190296F5247D2C8000C019C5 /* Terminal.xcodeproj */,
+				19029707247D38A300C019C5 /* dotfiles */,
+				1902970B247D390400C019C5 /* Dependency */,
 				190296E2247D2B9B00C019C5 /* TerminalExample */,
 				190296E1247D2B9B00C019C5 /* Products */,
 				190296FB247D2C9400C019C5 /* Frameworks */,
@@ -108,9 +110,6 @@
 		190296E2247D2B9B00C019C5 /* TerminalExample */ = {
 			isa = PBXGroup;
 			children = (
-				19029708247D38AC00C019C5 /* Information */,
-				19029707247D38A300C019C5 /* dotfiles */,
-				1902970B247D390400C019C5 /* Dependency */,
 				19A84153248F7FEC008FB52D /* Util */,
 				19A84154248F8154008FB52D /* KeyboardNotification */,
 				191EC525249BB3050058507E /* InputAccessoryView */,
@@ -119,6 +118,7 @@
 				190296E9247D2B9B00C019C5 /* Main.storyboard */,
 				190296EC247D2B9D00C019C5 /* Assets.xcassets */,
 				190296EE247D2B9D00C019C5 /* LaunchScreen.storyboard */,
+				190296F1247D2B9D00C019C5 /* Info.plist */,
 			);
 			path = TerminalExample;
 			sourceTree = "<group>";
@@ -145,15 +145,7 @@
 				19029709247D38CD00C019C5 /* .swiftlint.yml */,
 			);
 			name = dotfiles;
-			sourceTree = "<group>";
-		};
-		19029708247D38AC00C019C5 /* Information */ = {
-			isa = PBXGroup;
-			children = (
-				190296F1247D2B9D00C019C5 /* Info.plist */,
-			);
-			name = Information;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1902970B247D390400C019C5 /* Dependency */ = {
 			isa = PBXGroup;
