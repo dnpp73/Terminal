@@ -46,6 +46,7 @@
 		1930D0A52480237F00882D16 /* hterm.html */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.html; path = hterm.html; sourceTree = "<group>"; tabWidth = 2; };
 		1930D0A9248030AB00882D16 /* UIView+EdgeConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+EdgeConstraints.swift"; sourceTree = "<group>"; };
 		1932B3FC24925215003E9AFD /* WKWebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtension.swift; sourceTree = "<group>"; };
+		193396D825549FB100B7C772 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		193FEBE7247FF144004EC6F9 /* build_hterm.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_hterm.sh; sourceTree = "<group>"; };
 		194A3EBF248A8176005CCAF0 /* String+SpecialKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SpecialKeys.swift"; sourceTree = "<group>"; };
 		194A3EC1248A91D4005CCAF0 /* Character+Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Control.swift"; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		190296C0247D276B00C019C5 = {
 			isa = PBXGroup;
 			children = (
+				193396D825549FB100B7C772 /* Package.swift */,
 				19894269249D2E9700CBF00E /* LICENSE */,
 				1989426A249D2E9800CBF00E /* README.md */,
 				19029704247D386300C019C5 /* dotfiles */,
