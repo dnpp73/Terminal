@@ -442,8 +442,23 @@ public final class TerminalView: UIView {
         if panGestureRecognizer == self.panGestureRecognizer {
             if panGestureRecognizer.state == .began {
                 if mode != .scroll {
-                    enterScrollMode()
-                    panGestureRecognizer.cancel()
+                    let velocity = panGestureRecognizer.velocity(in: panGestureRecognizer.view)
+                    if velocity.x == 0.0 {
+                        // vertical finger move
+                        enterScrollMode()
+                        panGestureRecognizer.cancel()
+                    } else if velocity.y == 0.0 {
+                        // horizontal finger move
+                        // do nothing
+                    } else {
+                        let tanX = abs(velocity.y / velocity.x)
+                        // tan(75deg) = 2 + sqrt(3) => 3.7320....
+                        if 3.732 < tanX {
+                            // vertical finger move
+                            enterScrollMode()
+                            panGestureRecognizer.cancel()
+                        }
+                    }
                 }
             }
         }
