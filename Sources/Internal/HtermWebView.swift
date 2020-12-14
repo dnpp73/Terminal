@@ -15,17 +15,19 @@ final class HtermWebView: WKWebView {
         didSet {
             if isHtermLoaded == true {
                 if oldValue == false {
-                    reloadHtermColors()
+                    reloadHtermStyles()
                 }
-                terminalView.delegate?.terminalViewDidLoad(terminalView)
+                if let parentTerminalView = parentTerminalView {
+                    parentTerminalView.delegate?.terminalViewDidLoad(parentTerminalView)
+                }
             }
         }
     }
 
     private(set) var terminalSize: TerminalSize = .zero {
         didSet {
-            if oldValue != terminalSize {
-                terminalView.delegate?.terminalView(terminalView, didChangeTerminalSize: oldValue)
+            if oldValue != terminalSize, let parentTerminalView = parentTerminalView {
+                parentTerminalView.delegate?.terminalView(parentTerminalView, didChangeTerminalSize: oldValue)
             }
         }
     }
@@ -114,15 +116,7 @@ final class HtermWebView: WKWebView {
 
     // MARK: - Private Vars
 
-    weak var parent: TerminalView?
-
-    // shorthand
-    private var terminalView: TerminalView {
-        guard let terminalView = parent else {
-            fatalError("must not here")
-        }
-        return terminalView
-    }
+    weak var parentTerminalView: TerminalView?
 
     fileprivate var shouldEnterInputModeWhenJSTouchEnd: Bool = false
 
@@ -238,7 +232,7 @@ final class HtermWebView: WKWebView {
         super.traitCollectionDidChange(previousTraitCollection)
         if #available(iOS 13.0, *) {
             if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
-                reloadHtermColors()
+                reloadHtermStyles()
             }
         }
     }
@@ -251,7 +245,7 @@ final class HtermWebView: WKWebView {
         }
     }
 
-    private func reloadHtermColors() {
+    private func reloadHtermStyles() {
         guard isHtermLoaded else {
             return
         }
@@ -259,6 +253,9 @@ final class HtermWebView: WKWebView {
         evaluateOneArgumentJavaScript(functionName: "term.setForegroundColor", arg: foregroundColor.cssString)
         evaluateOneArgumentJavaScript(functionName: "term.setCursorColor", arg: cursorColor.cssString)
         evaluateOneArgumentJavaScript(functionName: "term.setFontSize", arg: fontSize)
+        evaluateOneArgumentJavaScript(functionName: "term.setCursorBlink", arg: isCursorBlink)
+        evaluateOneArgumentJavaScript(functionName: "term.setCursorShape", arg: cursorShape.rawValue)
+        evaluateOneArgumentJavaScript(functionName: "exports.setFontFamily", arg: fontFamily)
     }
 
     func reloadHterm() {
@@ -267,7 +264,7 @@ final class HtermWebView: WKWebView {
         isHtermLoaded = false
         stopLoading()
         loadBundleHTML()
-        // reloadHtermColors will call isHtermLoaded's didSet
+        // reloadHtermStyles will call isHtermLoaded's didSet
     }
 
 }
@@ -318,25 +315,31 @@ extension HtermWebView: WKScriptMessageHandler {
             case .htermScrollPortDidTouchEnd:
                 if self.shouldEnterInputModeWhenJSTouchEnd {
                     self.shouldEnterInputModeWhenJSTouchEnd = false
-                    self.terminalView.enterInputMode()
+                    if let parentTerminalView = self.parentTerminalView {
+                        parentTerminalView.enterInputMode()
+                    }
                 }
             case .htermScrollPortDidTouchCancel:
                 self.shouldEnterInputModeWhenJSTouchEnd = false
             case .htermDidHandleURL:
-                if let body = message.body as? String, let url = URL(string: body) {
-                    self.terminalView.delegate?.terminalView(self.terminalView, didHandleURL: url)
+                if let body = message.body as? String, let url = URL(string: body), let parentTerminalView = self.parentTerminalView {
+                    parentTerminalView.delegate?.terminalView(parentTerminalView, didHandleURL: url)
                 }
             case .htermHandleSendString:
                 guard let string = message.body as? String else {
                     break
                 }
-                self.terminalView.delegate?.terminalView(self.terminalView, didHandleSendString: string)
+                if let parentTerminalView = self.parentTerminalView {
+                    parentTerminalView.delegate?.terminalView(parentTerminalView, didHandleSendString: string)
+                }
                 self.setUserGesture()
             case .htermHandleOnVTKeyStroke:
                 guard let string = message.body as? String else {
                     break
                 }
-                self.terminalView.delegate?.terminalView(self.terminalView, didHandleOnVTKeyStroke: string)
+                if let parentTerminalView = self.parentTerminalView {
+                    parentTerminalView.delegate?.terminalView(parentTerminalView, didHandleOnVTKeyStroke: string)
+                }
                 self.setUserGesture()
             case .htermHandleOnTerminalResize:
                 guard let array = message.body as? [Any] else {

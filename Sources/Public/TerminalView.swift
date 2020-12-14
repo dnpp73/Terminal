@@ -181,7 +181,7 @@ public final class TerminalView: UIView {
         addGestureRecognizer(tapGestureRecognizer)
 
         let htermWebView = HtermWebView(frame: bounds)
-        htermWebView.parent = self
+        htermWebView.parentTerminalView = self
         addSubview(htermWebView)
         htermWebView.addConstraintsToSuperviewEdges()
         self.htermWebView = htermWebView
@@ -256,11 +256,7 @@ public final class TerminalView: UIView {
         case #selector(UIResponderStandardEditActions.copy):
             return false
         case #selector(UIResponderStandardEditActions.paste(_:)):
-            if UIPasteboard.general.string?.count ?? 0 > 0 {
-                return htermWebView.isHtermLoaded
-            } else {
-                return false
-            }
+            return htermWebView.isHtermLoaded
         case #selector(UIResponderStandardEditActions.delete(_:)):
             return false
         case #selector(UIResponderStandardEditActions.select(_:)):
