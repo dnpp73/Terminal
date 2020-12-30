@@ -28,6 +28,11 @@ If need ssh, you could use [`NMSSH/NMSSH`](https://github.com/NMSSH/NMSSH) libra
 - supports CJK IME (little buggy...)
 
 
+## Technical Detail
+
+Please see my [blog post](https://blog.dnpp.org/ios_terminal_emulator) (written in Japanese).
+
+
 ## How to use
 
 See Example Appication.
