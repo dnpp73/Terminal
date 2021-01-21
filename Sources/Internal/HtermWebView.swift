@@ -240,9 +240,15 @@ final class HtermWebView: WKWebView {
     // MARK: - Custom Methods
 
     private func loadBundleHTML() {
-        if let url = Bundle(for: Self.self).url(forResource: "hterm", withExtension: "html") {
-            loadFileURL(url, allowingReadAccessTo: url)
+        #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+        #else
+        let bundle = Bundle(for: Self.self)
+        #endif
+        guard let url = bundle.url(forResource: "hterm", withExtension: "html") else {
+            fatalError("[FATAL] could not get 'hterm.html' file url in Bundle.")
         }
+        loadFileURL(url, allowingReadAccessTo: url)
     }
 
     private func reloadHtermStyles() {

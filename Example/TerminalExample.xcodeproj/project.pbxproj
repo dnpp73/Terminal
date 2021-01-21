@@ -236,7 +236,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = dnpp.org;
 				TargetAttributes = {
 					190296DF247D2B9B00C019C5 = {
@@ -309,7 +309,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if [ -x '/opt/homebrew/bin/swiftlint' ]; then\n    SWIFTLINT='/opt/homebrew/bin/swiftlint'\nelif [ -x '/usr/local/bin/swiftlint' ]; then\n    SWIFTLINT='/usr/local/bin/swiftlint'\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n\"${SWIFTLINT}\" autocorrect\n";
 		};
 		19029711247D3A1B00C019C5 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -327,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if [ -x '/opt/homebrew/bin/swiftlint' ]; then\n    SWIFTLINT='/opt/homebrew/bin/swiftlint'\nelif [ -x '/usr/local/bin/swiftlint' ]; then\n    SWIFTLINT='/usr/local/bin/swiftlint'\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n\"${SWIFTLINT}\"\n";
 		};
 		19029713247D3A5600C019C5 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -346,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "if [ -x '/opt/homebrew/bin/carthage' ]; then\n    CARTHAGE='/opt/homebrew/bin/carthage'\nelif [ -x '/usr/local/bin/carthage' ]; then\n    CARTHAGE='/usr/local/bin/carthage'\nelse\n    exit 1\nfi\n\n\"${CARTHAGE}\" copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
