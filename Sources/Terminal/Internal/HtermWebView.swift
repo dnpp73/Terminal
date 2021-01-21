@@ -240,7 +240,7 @@ final class HtermWebView: WKWebView {
     // MARK: - Custom Methods
 
     private func loadBundleHTML() {
-        #if SWIFT_PACKAGE
+        #if SWIFT_PACKAGE && swift(>=5.3)
         let bundle = Bundle.module
         #else
         let bundle = Bundle(for: Self.self)

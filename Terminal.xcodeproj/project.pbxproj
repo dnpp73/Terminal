@@ -80,7 +80,6 @@
 				19029704247D386300C019C5 /* dotfiles */,
 				193FEBE6247FF138004EC6F9 /* bin */,
 				193396D325549C4400B7C772 /* Sources */,
-				1930D09C24801D2100882D16 /* Resources */,
 				190296D5247D2A8900C019C5 /* Terminal */,
 				190296D4247D2A8900C019C5 /* Products */,
 			);
@@ -155,8 +154,7 @@
 		193396D325549C4400B7C772 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				19029714247D3ACE00C019C5 /* Public */,
-				1930D0AB248030CD00882D16 /* Internal */,
+				19CF7EFB25B9D47000E704BC /* Terminal */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -167,6 +165,16 @@
 				193FEBE7247FF144004EC6F9 /* build_hterm.sh */,
 			);
 			path = bin;
+			sourceTree = "<group>";
+		};
+		19CF7EFB25B9D47000E704BC /* Terminal */ = {
+			isa = PBXGroup;
+			children = (
+				1930D09C24801D2100882D16 /* Resources */,
+				19029714247D3ACE00C019C5 /* Public */,
+				1930D0AB248030CD00882D16 /* Internal */,
+			);
+			path = Terminal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

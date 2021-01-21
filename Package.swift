@@ -14,9 +14,11 @@ let package = Package(
         .target(
             name: "Terminal",
             dependencies: [],
-            path: "Sources",
             resources: [
-                .process("Resources"),
+                .copy("Resources/hterm_all.js"),
+                .copy("Resources/hterm.html"),
+                .copy("Resources/hterm.css"),
+                .copy("Resources/hterm_bridge.js"),
             ]
         ),
     ]
